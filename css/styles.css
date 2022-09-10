@@ -712,12 +712,17 @@ h1,h2,h3,h4,ul,p{
 }
 .modal-form-icon-vector{
     margin-right: 8px;
+    transition: fill var(--transition-dur-and-funk);
 }
 .modal-form-check:checked + .modal-form-icon-vector{
     display: none;
 }
 .modal-form-check:checked ~ .modal-form-icon-check {
     display: inline-block;
+}
+
+.modal-form-check:focus + .modal-form-icon-vector{
+    fill: var(--active-color);
 }
 .modal-form-check-text{
     font-weight: 400;
@@ -751,12 +756,15 @@ h1,h2,h3,h4,ul,p{
     letter-spacing: 0.06em;
     border-radius: 4px;
 
-    transition: background-color var(--transition-dur-and-funk);
+    transition: background-color var(--transition-dur-and-funk), border-color var(--transition-dur-and-funk) ;
 }
 
 .modal-form-submit:hover,
 .modal-form-submit:focus {
     background-color: var(--dark-hover-color);
+    border-color: var(--active-color);
+    outline: none;
+    
 }
 /*====== Portfolio ======*/
 .button-wrap{
